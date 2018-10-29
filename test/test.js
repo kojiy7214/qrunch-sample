@@ -1,0 +1,17 @@
+const logger = require('jsclass-logger')({"debug": true}, "test");
+const Watch = require('../../qrunch-sample').Watch;
+
+
+
+describe("watch test", function(){
+	it("test", function(){
+		class A extends Watch{
+			foo(){
+				logger.debug("I am foo!");
+			};
+		};
+
+		let a = new A();
+		a.foo();
+	});
+});
